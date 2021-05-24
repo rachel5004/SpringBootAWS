@@ -2,3 +2,4 @@
 /.gradle/
 .grandle
 .idea
+application-oauth.properties
