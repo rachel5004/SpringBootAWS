@@ -4,6 +4,15 @@
         <div class="row">
             <div class="col-md-6">
                 <a href="/post/save" role="button" class="btn btn-primary">글 등록</a>
+            <!-- 머스테치는 if가 없이 true/false만 판단하므로 최종값을 항상 줘야함 -->
+            {{#userName}}
+                Logged in as: <span id="user">{{userName}}</span>
+                <a href="/lougout" class="btn btn-info active" role="button">Logout</a>
+            {{/userName}}
+            <!-- false의 경우 ^ -->
+            {{^userName}}
+                <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
+            {{/userName}}
             </div>
         </div>
         <br>
